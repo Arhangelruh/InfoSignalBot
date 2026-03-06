@@ -1,6 +1,6 @@
 ﻿namespace InfoSignal.Models
 {
-	internal class MailSettings
+	public class MailSettings
 	{
 		/// <summary>
 		/// Server addres.

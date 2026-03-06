@@ -1,4 +1,5 @@
 using InfoSignal;
+using InfoSignal.Interfaces;
 using InfoSignal.Models;
 using InfoSignal.Services;
 using NLog;
@@ -21,7 +22,8 @@ try
 	builder.Services.Configure<TimeSettings>(builder.Configuration.GetSection("TimeSettings"));
 	builder.Services.Configure<APISettings>(builder.Configuration.GetSection("APISettings"));
 
-	builder.Services.AddSingleton<DepartmentsService>();	
+	builder.Services.AddSingleton<DepartmentsService>();
+	builder.Services.AddSingleton<IMailService, MailService>();
 
 	builder.Services.AddHostedService<Worker>();
 
