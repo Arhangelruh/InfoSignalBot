@@ -1,5 +1,6 @@
 using InfoSignal;
 using InfoSignal.Models;
+using InfoSignal.Services;
 using NLog;
 using NLog.Extensions.Logging;
 using NLog.Web;
@@ -18,6 +19,9 @@ try
 
 	builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 	builder.Services.Configure<TimeSettings>(builder.Configuration.GetSection("TimeSettings"));
+	builder.Services.Configure<APISettings>(builder.Configuration.GetSection("APISettings"));
+
+	builder.Services.AddSingleton<DepartmentsService>();	
 
 	builder.Services.AddHostedService<Worker>();
 
