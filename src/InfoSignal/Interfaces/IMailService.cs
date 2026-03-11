@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace InfoSignal.Interfaces
+﻿namespace InfoSignal.Interfaces
 {
 	public interface IMailService
 	{
