@@ -15,11 +15,11 @@
 		/// <summary>
 		/// Department name.
 		/// </summary>
-    	public required string Name { get; set; }	
+    	public required string Name { get; set; }
 
 		/// <summary>
 		/// List currency amounts.
 		/// </summary>
-		public List<CurrencyAmount>? CurrencyAmounths { get; set; }
+		public List<CurrencyAmount> CurrencyAmounths { get; set; } = [];
 	}
 }
