@@ -30,7 +30,7 @@ namespace InfoSignal.Services
 						MailAddress to = new(_options.Receivers[0]);
 						using MailMessage mess = new(from, to);
 
-						if (_options.Receivers.Count > 1)
+						if (_options.Receivers.Count > 0)
 						{
 							foreach (var email in _options.Receivers)
 							{
